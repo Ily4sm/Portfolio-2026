@@ -15,7 +15,7 @@ export function Hero() {
             <div className="absolute inset-0 rounded-full ring-1 ring-white/25" />
 
             <Image
-              src="/profile.jpg"
+              src="/Profile.jpg"
               alt="Photo de profile"
               fill
               className="relative rounded-full object-cover border border-white/10"

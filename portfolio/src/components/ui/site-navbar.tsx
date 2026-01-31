@@ -9,7 +9,7 @@ export function SiteNavbar() {
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <Link href="/" className="font-semibold tracking-tight">
           <Image
-            src="/Logo.png"
+            src="/logo.png"
             alt="Ilyas MARDHI"
             width={32}
             height={32}

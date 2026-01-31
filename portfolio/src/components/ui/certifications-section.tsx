@@ -12,7 +12,7 @@ type Certif = {
 
 const certifs: Certif[] = [
   {
-    title: "Python Proggramming Fundamentals",
+    title: "Python Programming Fundamentals",
     issuer: "Microsoft",
     imageSrc: "/certifications/Microsoft Python Proggraming fundementals.png",
     verifyUrl: "https://www.coursera.org/account/accomplishments/verify/MW513HX0BBAQ",
@@ -20,13 +20,13 @@ const certifs: Certif[] = [
   {
     title: "Python Project For Data Science",
     issuer: "IBM",
-    imageSrc: "/certifications/IBM Python Project For Data Science.png",
+    imageSrc: "/certifications/IBM Python project for Data Science.png",
     verifyUrl: "https://www.coursera.org/account/accomplishments/verify/9BEEHROW73SS",
   },
   {
     title: "Foundations Of Fullstack Coding",
     issuer: "Microsoft",
-    imageSrc: "/certifications/Microsoft Foundations Of coding full stack.png",
+    imageSrc: "/certifications/Microsoft Foundations of coding full stack.png",
     verifyUrl: "https://www.coursera.org/account/accomplishments/verify/OO9OYQLOTHQF",
   },
   {
