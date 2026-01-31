@@ -55,10 +55,9 @@ export function ContactSection() {
         <div className="grid gap-8 md:grid-cols-2 md:items-start">
           <Reveal>
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-blue-500">Contact</h2>
               <p className="mt-2 text-muted-foreground">
-                Une opportunité, une question, ou juste un message ? Écris-moi ici — je
-                réponds rapidement.
+                Une opportunité, une question, ou juste un message ? N’hésitez pas à me contacter a travers le formulaire ou un Email direct !
               </p>
 
               <div className="mt-6 space-y-2 text-sm text-muted-foreground">
@@ -71,7 +70,6 @@ export function ContactSection() {
                     ilyasmardhi1@gmail.com
                   </a>
                 </p>
-                <p>Localisation : Maroc</p>
               </div>
             </div>
           </Reveal>
@@ -79,7 +77,7 @@ export function ContactSection() {
           <Reveal delay={0.12}>
             <Card className="border-white/10 bg-background/60 transition-all duration-200 hover:border-white/20 hover:shadow-lg">
               <CardHeader>
-                <CardTitle>Envoyer un message</CardTitle>
+                <CardTitle className="text-blue-500">Envoyer un message</CardTitle>
               </CardHeader>
 
               <CardContent>
@@ -103,7 +101,7 @@ export function ContactSection() {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="vous@exemple.com"
+                      placeholder="Votre Email"
                       required
                     />
                   </div>

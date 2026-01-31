@@ -21,28 +21,28 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Projet 1 — Nom du projet",
+    title: "User Management API — ASP.NET Core",
     description:
-      "Une courte description orientée impact (problème → solution → résultat). Exemple : application web pour gérer X avec authentification et dashboard.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui"],
-    repoUrl: "https://github.com/TON_USER/TON_REPO",
-    liveUrl: "https://ton-projet.vercel.app",
+     "API RESTful développée avec ASP.NET Core pour la gestion complète des utilisateurs (CRUD), l’authentification et la gestion des rôles. Le projet est structuré selon une architecture MVC claire, en appliquant les bonnes pratiques de développement : séparation des responsabilités, validation des données, gestion centralisée des erreurs et sécurité des endpoints.",
+
+    tech: ["C#", "ASP.NET Core", "Entity Framework Core","REST API","MVC","Git"],
+    repoUrl: "https://github.com/Ily4sm/User-Management-API.git",
     featured: true,
   },
   {
-    title: "Projet 2 — Nom du projet",
+    title: "Restaurant Management System",
     description:
-      "Mets en avant une feature technique: API, base de données, optimisation, tests, CI/CD, etc.",
-    tech: ["Node.js", "Express", "PostgreSQL"],
-    repoUrl: "https://github.com/TON_USER/TON_REPO_2",
+      "Application console développée en C++ pour la gestion d’un restaurant, implémentée selon les principes de la programmation orientée objet (POO). LE système permet la gestion des commandes, des plats et des clients, tout en mettant l’accent sur une conception modulaire, claire et maintenable.",
+    tech: ["C++", "POO", "STL"],
+    repoUrl: "https://github.com/Ily4sm/Console_Restaurant.git",
     featured: true,
   },
   {
-    title: "Projet 3 — Nom du projet",
+    title: "Système de Gestion Hôtelière",
     description:
-      "Un projet plus ‘algo’ ou ‘system’: compilation, IA, réseau, sécurité, etc. (selon ton profil).",
-    tech: ["Python", "FastAPI", "Docker"],
-    repoUrl: "https://github.com/TON_USER/TON_REPO_3",
+      "Système de gestion hôtelière, développé avec des technologies différentes selon les responsabilités métier.Le projet sépare la gestion des chambres et la gestion des événements / administration, en appliquant les principes de la programmation orientée objet (POO) et une conception modulaire et évolutive.",
+    tech: ["JAVA (POO)", "PHP (POO)", "MySQL", "HTML", "CSS", "JavaScript", "Git"],
+    repoUrl: "https://github.com/Ily4sm/Riad.git",
   },
 ];
 
@@ -56,7 +56,7 @@ export function ProjectsSection() {
         <Reveal>
           <div className="flex items-end justify-between gap-6">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight">Projets</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-blue-500">Projets</h2>
               <p className="mt-2 max-w-2xl text-muted-foreground">
                 Une sélection de projets qui montrent mon approche: conception,
                 qualité du code, et mise en production.

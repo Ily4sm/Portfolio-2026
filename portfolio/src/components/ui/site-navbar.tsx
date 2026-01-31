@@ -8,7 +8,14 @@ export function SiteNavbar() {
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <Link href="/" className="font-semibold tracking-tight">
-          Ilyas MARDHI
+          <Image
+            src="/Logo.png"
+            alt="Ilyas MARDHI"
+            width={32}
+            height={32}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         <nav className="flex items-center gap-2">

@@ -5,10 +5,28 @@ import { Reveal } from "@/components/reveal";
 export function Hero() {
   return (
     <section className="px-4 py-20">
-      <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
+      <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-2">
+        {/* Photo */}
+        <Reveal delay={0.15} className="flex justify-center md:justify-start">
+          <div className="relative h-56 w-56 md:h-72 md:w-72">
+
+            <div className="absolute -inset-6 rounded-full bg-white/20 blur-3xl" />
+
+            <div className="absolute inset-0 rounded-full ring-1 ring-white/25" />
+
+            <Image
+              src="/profile.jpg"
+              alt="Photo de profile"
+              fill
+              className="relative rounded-full object-cover border border-white/10"
+              priority
+            />
+          </div>
+          
+        </Reveal>
         {/* Texte */}
         <Reveal delay={0.05}>
-          <div>
+          <div className="max-w-x1">
             <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl text-blue-500">
               Ilyas MARDHI
             </h1>
@@ -36,25 +54,7 @@ export function Hero() {
           </div>
         </Reveal>
 
-        {/* Photo */}
-        <Reveal delay={0.15} className="flex justify-center md:justify-end">
-          <div className="relative h-56 w-56 md:h-72 md:w-72">
-            {/* Halo doux (glow) */}
-            <div className="absolute -inset-6 rounded-full bg-white/20 blur-3xl" />
-
-            {/* Cercle fin (ring) */}
-            <div className="absolute inset-0 rounded-full ring-1 ring-white/25" />
-
-            <Image
-              src="/profile.jpg"
-              alt="Photo de profile"
-              fill
-              className="relative rounded-full object-cover border border-white/10"
-              priority
-            />
-          </div>
-          
-        </Reveal>
+        
       </div>
     </section>
   );

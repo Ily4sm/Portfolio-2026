@@ -54,7 +54,7 @@ export function CertificationsSection() {
     <section id="certifications" className="px-4 py-16">
       <div className="mx-auto max-w-5xl">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight">Certifications</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-blue-500">Certifications</h2>
           <p className="mt-2 max-w-2xl text-muted-foreground">
             Certifications vérifiables. Cliquez pour ouvrir la page de vérification.
           </p>
