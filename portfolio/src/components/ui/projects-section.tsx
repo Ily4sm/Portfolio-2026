@@ -59,7 +59,7 @@ export function ProjectsSection() {
               <h2 className="text-2xl font-semibold tracking-tight text-blue-500">Projets</h2>
               <p className="mt-2 max-w-2xl text-muted-foreground">
                 Une sélection de projets qui montrent mon approche: conception,
-                qualité du code, et mise en production.
+                qualité du code, et mise en production. Vous pouvez trouver plus de projets sur mon profil GitHub.
               </p>
             </div>
           </div>
