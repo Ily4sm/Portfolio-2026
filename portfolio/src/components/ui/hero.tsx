@@ -27,6 +27,11 @@ export function Hero() {
               <Button asChild variant="secondary">
                 <a href="#contact">Me contacter</a>
               </Button>
+              <Button asChild variant="outline">
+                    <a href="/CV.pdf" download>
+                    Télécharger Mon CV
+                    </a>
+                </Button>
             </div>
           </div>
         </Reveal>
@@ -48,6 +53,7 @@ export function Hero() {
               priority
             />
           </div>
+          
         </Reveal>
       </div>
     </section>
