@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
 import { Reveal } from "@/components/reveal";
+import { ExternalLink } from "lucide-react";
 
 type Certif = {
   title: string;
@@ -51,39 +50,85 @@ const certifs: Certif[] = [
 
 export function CertificationsSection() {
   return (
-    <section id="certifications" className="px-4 py-16">
+    <section id="certifications" className="px-4 py-20">
       <div className="mx-auto max-w-5xl">
+        {/* Section header */}
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-blue-500">Certifications</h2>
-          <p className="mt-2 max-w-2xl text-muted-foreground">
-            Certifications vérifiables. Cliquez pour ouvrir la page de vérification.
-          </p>
+          <div className="flex flex-col gap-3">
+            <p
+              className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase"
+              style={{ color: "var(--accent-color)" }}
+            >
+              <span
+                aria-hidden
+                className="inline-block h-px w-5"
+                style={{ background: "var(--accent-color)" }}
+              />
+              Parcours
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground">
+              Certifications
+            </h2>
+            <p className="max-w-lg text-sm text-muted-foreground leading-relaxed">
+              Certifications vérifiables — cliquez pour accéder à la page de
+              vérification officielle.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Grid */}
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {certifs.map((c, idx) => (
             <Reveal key={c.title} delay={0.05 * idx}>
-              <a href={c.verifyUrl} target="_blank" rel="noreferrer" className="block">
-                <Card className="group border-white/10 bg-background/50 transition-all duration-200 hover:-translate-y-1 hover:border-white/20 hover:shadow-lg">
-                  <CardHeader className="space-y-2">
-                    <div className="flex items-start justify-between gap-3">
-                      <CardTitle className="text-base">{c.title}</CardTitle>
-                      <ExternalLink className="h-4 w-4 text-muted-foreground transition group-hover:text-foreground" />
-                    </div>
-                    <p className="text-sm text-muted-foreground">{c.issuer}</p>
-                  </CardHeader>
+              <a
+                href={c.verifyUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="group block h-full"
+                aria-label={`Vérifier la certification : ${c.title} par ${c.issuer}`}
+              >
+                <article
+                  className="card-hover h-full flex flex-col rounded-xl overflow-hidden"
+                  style={{
+                    background: "var(--card)",
+                    border: "1px solid rgba(255,255,255,0.07)",
+                  }}
+                >
+                  {/* Cert image */}
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={c.imageSrc}
+                      alt={`Certificat : ${c.title}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                    {/* Subtle overlay */}
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ background: "rgba(91,125,216,0.06)" }}
+                    />
+                  </div>
 
-                  <CardContent>
-                    <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-white/10">
-                      <Image
-                        src={c.imageSrc}
-                        alt={`Certificat: ${c.title}`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                      />
+                  {/* Card footer */}
+                  <div className="flex items-center justify-between gap-3 px-4 py-3">
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold text-foreground truncate">
+                        {c.title}
+                      </p>
+                      <p
+                        className="text-xs mt-0.5"
+                        style={{ color: "var(--accent-color)" }}
+                      >
+                        {c.issuer}
+                      </p>
                     </div>
-                  </CardContent>
-                </Card>
+                    <ExternalLink
+                      className="h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground"
+                      aria-hidden
+                    />
+                  </div>
+                </article>
               </a>
             </Reveal>
           ))}
