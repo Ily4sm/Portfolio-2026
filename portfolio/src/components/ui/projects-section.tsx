@@ -13,6 +13,14 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "MDINTI — Plateforme de gestion des réclamations urbaines",
+    description:
+      "Plateforme web permettant aux citoyens de créer et suivre des réclamations urbaines, aux municipalities de les gérer, et aux techniciens de traiter les missions terrain. Architecture microservices avec authentification, gestion des rôles, stockage de fichiers et notifications.",
+    tech: ["AWS", "CloudFront", "S3", "EC2", "Spring Boot", "ASP.NET", "PostgreSQL", "Docker", "API Gateway","JWT", "MinIO", "Kafka", "REST API", "MVC", "Git"],
+    repoUrl: "https://github.com/Ily4sm/MDINTI.git",
+    featured: true,
+  },
+  {
     title: "User Management API — ASP.NET Core",
     description:
       "API RESTful pour la gestion complète des utilisateurs (CRUD), l'authentification et la gestion des rôles. Architecture MVC avec séparation des responsabilités, validation des données, gestion centralisée des erreurs et sécurité des endpoints.",
